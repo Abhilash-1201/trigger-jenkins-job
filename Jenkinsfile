@@ -13,7 +13,7 @@ pipeline{
                     def scannerHome = tool 'sonarqube-scanner';
                     withSonarQubeEnv(credentialsId: 'sonarqube_access_token'){
                         sh "${tool("sonarqube-scanner")}/bin/sonar-scanner \
-                        -Dsonar.projectKey=nodejs \
+                        -Dsonar.projectKey=demoproject \
                         -Dsonar.sources=. \
                         -Dsonar.css.node=. \
                         -Dsonar.host.url=http://3.15.224.245:9000 \
