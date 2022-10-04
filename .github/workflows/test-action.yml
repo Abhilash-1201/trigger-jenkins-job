@@ -8,14 +8,14 @@ jobs:
 
   testaction:
     
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # - uses: actions/checkout@v2
 
       - id: testjenkinsaction
-        uses: mickeygoussetorg/trigger-jenkins-job@v1
+        uses: Abhilash-1201/trigger-jenkins-job@master
         with:
           jenkins-server:  "${{ secrets.JENKINS_SERVER }}" # URL of the jenkins server
           jenkins-job: "mySampleApp" # The name of the jenkins job to run
